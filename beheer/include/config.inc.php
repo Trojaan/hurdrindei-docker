@@ -3,16 +3,16 @@
 
 // Site meuk
 define ( 'SITE_NAME', 'Kubaarder Hurdrindei' );
-define ( 'ADMIN_PATH', 'http://localhost:8090/beheer/' );
+define ( 'ADMIN_PATH', 'http://www.kubaarderhurdrindei.nl/beheer/' );
 //define ( 'ADMIN_PATH', 'http://www.kubaarderhurdrindei.nl/beheer/' );
-define ( 'URL_ROOT', 'http://localhost:8090/index.php' );
-define ( 'URL', 'http://localhost:8090/' );
-define ( 'URL_UPLOAD', 'http://localhost:8090/beheer/upload/' );
+define ( 'URL_ROOT', 'http://www.kubaarderhurdrindei.nl/index.php' );
+define ( 'URL', 'http://www.kubaarderhurdrindei.nl/' );
+define ( 'URL_UPLOAD', 'http://www.kubaarderhurdrindei.nl/beheer/upload/' );
 
 // Database meuk
 define ( 'DB_HOST', 'localhost' );
-define ( 'DB_USER', 'admin' );
-define ( 'DB_PASS', '2Vd7DLge5TFK' );
+define ( 'DB_USER', 'root' );
+define ( 'DB_PASS', '' );
 define ( 'DB_DB', 'kubaarderhurdri' );
 define ( 'DB_PREFIX', 'hurd' );
 
