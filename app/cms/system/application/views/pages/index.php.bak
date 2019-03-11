@@ -1,0 +1,140 @@
+      <div id="navigationBar">
+        <div id="contentMenu">
+          <a href="<?= site_url('pages/add')?>">
+            <span class="add" title="Toevoegen">
+            </span>
+            Toevoegen
+          </a>
+          <a href="#">
+            <span class="delete" title="Verwijderen">
+            </span>
+            Verwijderen
+          </a>
+          <a href="#" onclick="javascript:if(document.adminForm.boxchecked.value==0){alert('Selecteer een pagina die u als standaard wilt instellen.');}else{ submitbutton('setdefault')}">
+            <span class="default" title="Standaard">
+            </span>
+            Standaard
+          </a>
+          <a href="#" onclick="javascript:if(document.adminForm.boxchecked.value==0){alert('Selecteer een pagina die u wilt publiceren.');}else{ submitbutton('publishpage')}">
+            <span class="publish" title="Publiceren">
+            </span>
+            Publiceren
+          </a>
+          <a href="#" onclick="javascript:if(document.adminForm.boxchecked.value==0){alert('Selecteer een pagina die u wilt depubliceren.');}else{ submitbutton('unpublishpage')}">
+            <span class="unpublish" title="Depubliceren">
+            </span>
+            Depubliceren
+          </a>
+        </div>
+       </div>
+<?php 
+
+  $attributes = array('name' => 'adminForm');
+  echo form_open('pages', $attributes); 
+?>
+       <table class="adminlist">
+        <thead>
+          <tr>
+            <th width="20">
+              #
+            </th>
+            <th width="20">
+              <input name="toggle" value="" onclick="checkAll(9);" type="checkbox">
+            </th>
+            <th class="title">
+              <a href="javascript:tableOrdering('title','<?= isset($filter_order_Dir) || $filter_order_Dir == 'ASC' ? 'desc' : 'asc' ?>','');" title="Klik hier om volgens deze kolom te sorteren">Pagina</a>
+            </th>
+            <th width="20">
+              Module
+            </th>
+            <th width="5%">
+              Standaard
+            </th>
+            <th nowrap="nowrap" width="5%">
+              <a href="javascript:tableOrdering('active','<?= isset($filter_order_Dir) || $filter_order_Dir == 'ASC' ? 'desc' : 'asc' ?>','');" title="Klik hier om volgens deze kolom te sorteren">Gepubliceerd</a>
+            </th>
+            <th nowrap="nowrap" width="13%">
+              <a href="javascript:tableOrdering('orderID','<?= isset($filter_order_Dir) || $filter_order_Dir == 'ASC' ? 'desc' : 'asc' ?>','');" title="Klik hier om volgens deze kolom te sorteren">Volgorde<img src="<?= getThemeGFXPath() ?>sort_asc.png" alt=""></a>
+              <a href="javascript:saveOrder('saveorder')" title="Volgorde opslaan"><img src="<?= getThemeGFXPath() ?>icon-filesave.png" alt="Volgorde opslaan"></a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="12">
+              &nbsp;
+            </td>
+          </tr>
+        </tfoot>
+        <tbody>
+<?php
+    if (count($pageData) > 0) {
+
+      $ctr = 0;
+
+      foreach ($pageData as $page_info) {
+
+        $ctr++;
+?>
+          <tr class="row<?php echo $ctr & 1 ?>">
+            <td>
+              <?php echo $ctr ?>
+            </td>
+            <td>
+              <input id="hid<?php echo $ctr ?>" name="hid[]" value="<?php echo $page_info['pageID'] ?>" type="hidden" />
+              <input id="cb<?php echo $ctr ?>" name="cid[]" value="<?php echo $page_info['pageID'] ?>" onclick="isChecked(this.checked);" type="checkbox">
+            </td>
+            <td nowrap="nowrap">
+              <?php echo ( $page_info['hasParent'] == 'yes' ? '<img src="' . getThemeGFXPath() .'child-arrow.png" class="childArrow" />'  : '' ) ?>
+              <span class="editlinktip hasTip">
+                <a href="<?php echo site_url('pages/edit') . '/' . $page_info['pageID'] . '' .  '/' . ( isset($page_info['parentID']) ? $page_info['parentID'] : 0 ) . '/' . ( $page_info['moduleID'] > 0 ? $page_info['moduleID'] . '/' : '' ) ?>"><?php echo stripslashes($page_info['title']) ?></a>
+              </span>
+            </td>
+            <td align="center">
+              <?php //echo $this->getModuleIcon($page_info['pageID'])?>
+            </td>
+            <td align="center">
+              <?php echo ( $page_info['is_default'] == '1' ? '<img src="' . getThemeGFXPath() .'icon-16-star.png" alt="Standaard">' : '' ) ?>
+            </td>
+            <td align="center">
+            <?php if( $page_info['active'] == '1' ) { ?>
+              <a href="javascript:void(0);" onclick="return listItemTask('cb<?php echo $ctr ?>,'unpublishpage')" title="Depubliceer item">
+                <img src="<?php getThemeGFXPath() ?>icon-tick.png" alt="Gepubliceerd" border="0">
+              </a>
+            <?php } else { ?>
+              <a href="javascript:void(0);" onclick="return listItemTask('cb<?php echo  $ctr ?>,'publishpage')" title="Publiceer item">
+                <img src="<?php echo getThemeGFXPath() ?>publish_x.png" alt="Gedepubliceerd" border="0">
+              </a>'
+            <?php } ?>
+            </td>
+            <td class="order" nowrap="nowrap">
+              <span>&nbsp;</span>
+              <span>
+                <?php if( $ctr < 18 ) { ?>
+                <a href="#reorder" onclick="return saveOrder(<?php echo $ctr ?>,'orderdown')" title="Naar beneden">
+                  <img src="<?php echo getThemeGFXPath() ?>downarrow.png" alt="Naar beneden" border="0" height="16" width="16">
+                </a>
+                <?php } else { echo '&nbsp;'; } ?>
+              </span>
+              <span>
+                <?php if( $ctr > 1 ) { ?>
+                <a href="#reorder" onclick="return saveOrder(<?php echo $ctr ?>,'orderup')" title="Naar boven">
+                  <img src="<?php echo getThemeGFXPath() ?>uparrow.png" alt="Naar boven" border="0" height="16" width="16">
+                </a>
+                <?php } else { echo '&nbsp;'; } ?>
+              </span>
+              <input id="oid<?php echo $ctr ?>" name="order[]" size="5" value="<?php echo $page_info['orderID'] ?>" class="text_area" style="text-align: center;" type="text">
+            </td>
+          </tr>
+<?php
+      }
+    }
+?>
+        </tbody>
+      </table>
+       <input type="hidden" name="boxchecked" value="0" />
+       <input type="hidden" name="task" value="" />
+       <input type="hidden" name="filter_order" value="" />
+       <input type="hidden" name="filter_order_Dir" value="ASC" />
+
+      </form>

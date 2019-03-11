@@ -1,0 +1,222 @@
+body {
+  background-color: #729ccc;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+}
+
+div#mainContainer {
+  margin: auto;
+  margin-top: 5px;
+  width: 960px;
+  height: 100%;
+  background: #ffffff url('images/gradient-bg.gif') left top no-repeat;
+}
+
+div#header {
+  height: 358px;
+}
+
+div#topText {
+  background: url('images/top_text.gif') right bottom no-repeat;
+  width: 778px;
+  height: 29px;
+  padding-top: 35px;
+  padding-left: 130px;
+}
+
+div#infoField {
+  width: 337px;
+  height: 157px;
+  margin-top: 80px;
+  margin-left: 65px;
+  float: left;
+}
+
+div#logo {
+  margin-left: 15px;
+  float: left;
+}
+
+div#topMenu {
+  height: 27px;
+  background: url('images/menu-bg.gif') left bottom no-repeat;
+}
+
+div#topMenu ul {
+  list-style-image: none;
+  list-style-position: none;
+  list-style-type: none;
+  margin: 0 0 0 38px;
+  padding-top: 0;
+}
+
+div#topMenu li {
+  float: left;
+}
+
+div#topMenu a {
+  background: url('images/menuButton2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #555555;
+}
+
+div#topMenu a:hover {
+  background: url('images/menuButton-active2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #729ccc;
+}
+
+div#topMenu a.active {
+  background: url('images/menuButton-active2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #729ccc;
+}
+
+div#outerContent {
+  background-color: #fff;
+}
+
+div#innerContent {
+  background: #fff url('images/content-top3.gif') top center no-repeat;
+  width: 952px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+}
+
+div.spacer {
+  width: 1px;
+  float: right;
+  height: 650px
+}
+
+div#contentHeader {
+  padding-top: 15px;
+  margin-left: 30px;
+}
+
+div#content {
+  text-align: left;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+/* SIGNUP FORM */
+
+table.signup {
+  width: 500px;
+  color: #6D6D6D;
+}
+
+table.signup th {
+  text-align: left;
+}
+
+table.signup tr {
+  height: 30px;
+  line-height: 30px;
+}
+
+table.signup input {
+  border: 1px solid #C9C9C9;
+  margin-right: 15px;
+}
+
+table.signup label {
+  margin-right: 5px;
+}
+
+div.ErrorMsg {
+  width: 442px;
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+}
+
+table.signup textarea {
+  width: 350px;
+  margin-bottom: 20px;
+  border: 1px solid #C9C9C9;
+}
+
+input.large {
+  width: 350px;
+}
+
+input.middleLarge {
+  width: 206px;
+}
+
+input.small {
+  width: 50px;
+  margin-right: 10px;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+input.button {
+  margin-top: 20px;
+  cursor: pointer;
+  background: url('images/form-btn.gif');
+  height: 33px;
+  width: 113px;
+  color: #fff;
+  font-weight: bold;
+}
+
+a.print {
+  display: block;
+  margin-top: 20px;
+  text-align: right;
+  padding-right: 11px;
+  background: url('images/form-print.gif');
+  height: 33px;
+  line-height: 33px;
+  width: 102px;
+  color: #fff;
+  font-weight: bold;
+}
+
+tr.none {
+  display: none;
+}
+
+/* RESULTS */
+
+table#tableOverview {
+  width: 850px;
+}
+
+table#tableOverview th {
+  text-align: left;
+  background-color: #729CCC;
+  color: #fff;
+}
+
+select.yearSelect {
+
+}

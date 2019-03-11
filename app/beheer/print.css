@@ -1,0 +1,276 @@
+body {
+	margin: auto;
+	font-family: arial, tahoma, sans-serif;
+	font-size: 11px;
+
+}
+
+div#left {
+  display: none;
+  width: 0;
+}
+
+h1 {
+	font-family: arial, tahoma, sans-serif;
+	font-size: 18px;
+	color: #000;
+	font-weight: normal;
+}
+h2 {
+	font-family: arial, tahoma, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+	display: block;
+	padding: 5px;
+	background: #6a91b0 url('gfx/h1_bg.gif') repeat-x top; 
+	color: #fff;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	font-family: arial, tahoma, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+img {
+	border: 0px;
+}
+form {
+	margin: 0px;
+}
+a {
+	color: #4b8fc3;
+}
+textarea {
+	width: 99%;
+	margin-right: 15px;
+}
+input, select {
+	font-size: 11px;
+}
+/*### Login ###*/
+div#login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 450px;
+	height: 150px;
+	margin-left: -161px;
+	margin-top: -100px;
+	background: url('gfx/login_bg.jpg') no-repeat center top;
+	padding: 1px;
+	border: 1px solid black;
+}
+div#login input {
+	border: 1px solid #606060;
+	font-size: 11px;
+	padding: 1px 3px;
+}
+div#login table {
+	margin: 80px 0px 0px 40px;
+}
+div#login table td {
+	font-size: 9px;
+	vertical-align: middle;
+}
+div#login .loginButton {
+	float: right;
+	font-size: 11px;
+}
+
+div#mainContainer {
+	width: 1024px;
+	margin: auto;
+}
+div#header {
+  display: none;
+}
+div#leftNav {
+	float: left;
+	width: 224px;
+}
+div#right {
+  float: left;
+}
+td.printHidden {
+  display: none;
+}
+div#rightNav {
+	float: right;
+	width: 758px;
+	padding: 20px;
+}
+div#topNav {
+	border-bottom: 4px solid black;
+	padding: 1px 10px;
+	background-color: #e7e7e7;
+}
+
+div#customerLogo {
+  display: none;
+}
+div#menu {
+  display: none;
+
+}
+div#menu a {
+  display: none;
+
+}
+div#menu a:hover {
+	text-decoration: underline;
+}
+table#topInput {
+	background-color: #f2f2f2;
+	margin-bottom: 10px;
+	width: 100%;
+}
+table#topInput input  {
+	border: 1px solid #cccccc;
+	width: 280px;
+	padding-left: 4px;
+}
+table#topInput input.time {
+  width: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+table#topInput td {
+	padding: 4px;
+	font-weight: bold;
+}
+
+table#tableOverview {
+	width: 1000px;
+	margin-bottom: 10px;
+}
+table#tableOverview td {
+	padding: 2px 8px;
+}
+table#tableOverview .lightRow {
+	background-color: #f2f2f2;
+}
+table#tableOverview .darkRow {
+	background-color: #e7e7e7;
+}
+tr.overviewTop {
+	background-color: #77a7cc;
+	font-weight: bold;
+	color: white;
+}
+tr.overviewTop td {
+	color: white;
+}
+.button {
+	border: 1px solid #d5d5d5;
+	background: url('gfx/button_bg.gif') repeat-x top;
+	font-weight: bold;
+	font-size: 11px;
+	margin-top: 20px;
+	height: 31px;
+	line-height: 31px;
+	cursor: pointer;
+	padding: 0 20px;
+}
+a.link {
+	border: 1px solid #d5d5d5;
+	background: url('gfx/button_bg.gif') repeat-x top;
+	float: left;
+	padding: 0 20px;
+	line-height: 21px;
+	margin-top: 20px;
+	color: #000;
+	text-decoration: none;
+}
+table#topInput .checkboxTD input {
+	width: 20px;
+}
+div.editDiv {
+	background-color: #f2f2f2;
+	padding: 12px 8px;
+	width: 612px;
+	border-top: 1px solid #d9dbdb;
+	border-bottom: 1px solid #d9dbdb;
+}
+div#breadCrumbs {
+	margin: 10px 0;
+}
+table.formTable {
+	width: 100%;
+}
+table.formTable td {
+	padding: 4px 1px 4px 5px;
+	vertical-align: middle;
+}
+table.formTable img {
+	vertical-align: middle;
+}
+table.formTable tr.row0 td {
+	border-bottom: 1px dotted #b7b7b7;
+}
+table.formTable tr.row1 td {
+	background-color: #f2f2f2;
+	border-bottom: 1px dotted #b7b7b7;
+}
+table.formTable .text {
+	border: 1px solid #abadb3;
+	font-size: 11px;
+	padding: 1px 3px;
+	width: 250px;
+}
+table.formTable .check {
+	border: 1px solid #abadb3;
+	padding: 1px 1px;
+	vertical-align: middle;
+}
+table.formTable tr.subHead td {
+	background-color: #b7b7b7;
+	font-weight: bold;
+}
+div#messageText {
+	border: 1px solid #6d93b1;
+	text-align: center;
+	padding: 50px 20px;
+	color: red;
+}
+
+
+/* Search */
+
+div.searchBar {
+  width: 370px;
+  background-color: #cccccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+div.searchBar label {
+  margin-right: 5px;
+}
+
+div.searchBar input.text {
+  width: 150px;
+}
+
+div.searchBar input.button {
+  float: right;
+}
+
+select.yearSelect {
+  float: right;
+  margin-bottom: 10px;
+}
+
+div.searchBar h2 {
+  background: none;
+}
+
+table.innerSearch {
+  display: none;
+}
+
+div.searchFilter {
+  float: left;
+}

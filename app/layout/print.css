@@ -1,0 +1,250 @@
+html {
+  height: 100%;
+}
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 20px;
+}
+
+ul {
+	margin: 15px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: underline;
+	color: #729ccc;
+}
+h1 {
+	color: #729ccc;
+	font-size: 35px;
+	font-family: 'Trebuchet MS', Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 5px;
+  padding-left: 16px;
+  background: url('images/headButton.gif') no-repeat 0px 2px;
+  text-align: left;
+}
+h2 {
+	color: #729ccc;
+	font-size: 25px;
+	font-family: 'Trebuchet MS', Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 5px;
+	font-weight: normal;
+  text-align: left;
+}
+h3 {
+	color: #565656;
+	font-size: 25px;
+	font-family: 'Trebuchet MS', Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 5px;
+  text-align: left;
+}
+img {
+	border: 0px;
+}
+form {
+	margin: 0px;
+}
+input {
+  border: 0;
+}
+select {
+	font-size: 25px;
+}
+hr {
+	border: none; 
+	border-bottom: 1px solid #729ccc;
+	height: 0;
+}
+table {
+	border-collapse: collapse;
+	margin: 0px;
+  font-size: 25px;
+}
+td {
+	vertical-align: top;
+	padding: 0px;
+}
+
+/* Print gedeelte */
+
+body {
+  background-color: #fff6;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+}
+
+div#mainContainer {
+  margin: auto;
+  margin-top: 5px;
+  width: 960px;
+  height: 100%;
+}
+
+div#header {
+  display: none;
+}
+
+div#topText {
+  background: url('images/top_text.gif') right bottom no-repeat;
+  width: 778px;
+  height: 29px;
+  padding-top: 35px;
+  padding-left: 130px;
+}
+
+div#infoField {
+  background: url('images/info.gif') right bottom no-repeat;
+  width: 337px;
+  height: 156px;
+  padding-top: 80px;
+  padding-left: 65px;
+  float: left;
+}
+
+div#logo {
+  margin-left: 15px;
+  float: left;
+}
+
+div#topMenu {
+  display: none;
+}
+
+div#topMenu ul {
+  list-style-image: none;
+  list-style-position: none;
+  list-style-type: none;
+  margin: 0 0 0 38px;
+  padding-top: 0;
+}
+
+div#topMenu li {
+  float: left;
+}
+
+div#topMenu a {
+  background: url('images/menuButton2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #555555;
+}
+
+div#topMenu a:hover {
+  background: url('images/menuButton-active2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #729ccc;
+}
+
+div#topMenu a.active {
+  background: url('images/menuButton-active2.gif') no-repeat;
+  display: block;
+  height: 28px;
+  width: 120px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #729ccc;
+}
+
+div#outerContent {
+  background-color: #fff;
+}
+
+div#innerContent {
+  width: 952px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+}
+
+div.spacer {
+  width: 1px;
+  float: right;
+  height: 650px
+}
+
+div#contentHeader {
+  padding-top: 15px;
+  margin-left: 30px;
+}
+
+div#content {
+  text-align: left;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+/* SIGNUP FORM */
+
+table.signup {
+  width: 500px;
+  color: #6D6D6D;
+}
+
+table.signup th {
+  text-align: left;
+}
+
+table.signup tr {
+  height: 30px;
+  line-height: 30px;
+}
+
+table.signup input {
+  border: 1px solid #C9C9C9;
+  margin-right: 15px;
+}
+
+table.signup label {
+  margin-right: 5px;
+}
+
+div.ErrorMsg {
+  width: 442px;
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+}
+
+table.signup textarea {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+input.large {
+  width: 350px;
+}
+
+input.middleLarge {
+  width: 206px;
+}
+
+input.small {
+  width: 50px;
+  margin-right: 10px;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+a.print {
+  display: none;
+}

@@ -1,0 +1,422 @@
+/* MAIN */
+
+div#mainContainer {
+	position: relative;
+	left: 50%;
+	margin-left: -500px;
+	width: 1000px;
+}
+
+div#mainContainerHeader {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  overflow: visible;
+}
+
+/* HEADER */
+
+div#mainContainer div#header {
+  height: 112px;
+  position: relative;
+}
+
+div#header div.logo {
+  position: absolute;
+  left: 20;
+  top: 70;
+  width: 229px;
+  height: 23px;
+  background: url('../gfx/website-beheer.png') no-repeat;
+}
+
+div.logoLogin {
+  width: 229px;
+  height: 23px;
+  background: url('../gfx/website-beheer.png') no-repeat;
+}
+
+/* MENU */
+
+div#menu {
+  height: 35px;
+  background-color: #d9d9d9;
+  position: relative;
+}
+div#menu ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0pt;
+	padding: 0pt;
+}
+div#menu ul li {
+	float: left;
+	position: relative;
+	z-index: 8;
+}
+div#menu li ul {
+	display: none;
+	position: absolute;
+	top: 35px;
+}
+div#menu ul li a {
+  width: 120px;
+  height: 35px;
+	display: block;
+	float: left;
+	text-decoration: none;
+  cursor: default;
+}
+div#menu ul li a.active {
+	color: #fff;
+}
+* html ul li {
+	height:1%;
+}
+div#menu li:hover ul, div#menu li.over ul {
+	display: block;
+	width: 160px;
+	left: 0;
+}
+div#menu ul.subMenu {
+	padding: 6px;
+	background: #fafafa url('../gfx/bg-subnav.png') repeat-x scroll 0 0;
+}
+div#menu ul.subMenu li {
+	float: none;
+	line-height: 32px;
+}
+div#menu ul.subMenu li a {
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+  text-align: center;
+	color: #000000;
+	line-height: 35px;
+	width: 148px;
+  cursor: pointer;
+}
+div#menu ul.subMenu li a:hover {
+	background: transparent url('../gfx/subItem-bg.png') no-repeat center;
+	color: #fff;
+}
+
+div#menu a.pages {
+  background: url('../gfx/btn-pages.png') no-repeat;
+}
+
+div#menu a.pages:hover {
+  background: url('../gfx/btn-pages-active.png') no-repeat;
+}
+
+div#menu a.modules {
+  background: url('../gfx/btn-modules.png') no-repeat;
+}
+
+div#menu a.modules:hover {
+  background: url('../gfx/btn-modules-active.png') no-repeat;
+}
+
+div#menu a.users {
+  background: url('../gfx/btn-users.png') no-repeat;
+}
+
+div#menu a.users:hover {
+  background: url('../gfx/btn-users-active.png') no-repeat;
+}
+
+div#menu a.logout {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 35px;
+  background: url('../gfx/btn-logout.png') no-repeat;
+  right: 0;
+}
+
+div#menu a.logout:hover {
+  background: url('../gfx/btn-logout-active.png') no-repeat;
+}
+
+/* CONTENT */
+
+div#mainContainer div#content {
+  background-color: #fff;
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+  padding: 5px;
+  padding-top: 15px;
+}
+
+div#mainContainer div#contentTitle {
+  margin-left: 30px;
+  font-size: 26px;
+  color: #fff;
+  height: 46px;
+  width: 975px;
+  !width: 985px;
+  padding-left: 10px;
+  background: url('../gfx/title-bar.png') no-repeat;
+}
+
+div#mainContainer div#navigationBar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  position: relative;
+}
+
+div#mainContainer div#contentMenu {
+  position: absolute;
+  right: 0;
+}
+
+div#contentMenu a { 
+  display: block;
+  float: left;
+	white-space: nowrap;
+	border: 1px solid #fbfbfb;
+	padding: 1px 5px;
+	cursor: pointer;
+}
+
+div#contentMenu span {
+  float: none;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  display: block;
+}
+
+div#contentMenu span.add {
+  background: url('../gfx/Add.png') no-repeat;
+}
+
+div#contentMenu span.delete {
+  background: url('../gfx/Delete.png') no-repeat;
+}
+
+div#contentMenu span.default {
+  background: url('../gfx/icon-32-star.png') no-repeat;
+}
+
+div#contentMenu span.publish {
+  background: url('../gfx/icon-32-publish.png') no-repeat;
+}
+
+div#contentMenu span.unpublish {
+  background: url('../gfx/icon-32-unpublish.png') no-repeat;
+}
+
+div#content div#innerContent {
+  padding: 30px;
+  padding-top: 0px;
+}
+
+div#content ul.list {
+  list-style-type: none;
+}
+
+div#content ul.list li {
+  background: url('../gfx/folder.gif') no-repeat;
+  display: block;
+  width: 10px;
+}
+
+/* FORM */
+input.savebutton {
+  cursor: pointer;
+  border: 0;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 28px;
+  width: 100px;
+  background: url('../gfx/btn-save.png') no-repeat;
+}
+
+input.cancelbutton {
+  cursor: pointer;
+  border: 0;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 28px;
+  width: 100px;
+  background: url('../gfx/btn-cancel.png') no-repeat;
+}
+
+div.spacer {
+  clear: both;
+  height: 20px;
+}
+
+/* TABLE FORM */
+
+.defaultHidden {
+  display: none;
+}
+
+img.childArrow {
+  margin-left: 17px;
+  margin-right: 5px;
+}
+
+div.formBlock {
+  padding: 5px;
+  border: 1px solid #e2e2e2;
+  background: #efefef none repeat-x scroll 0 0;
+  margin-bottom: 10px;
+}
+
+table.formtable {
+  background-color: #efefef;
+  width: 100%;
+  color: #555555;
+}
+
+table.formTable tr {
+  height: 22px;
+  line-height: 22px;
+}
+
+/* ADMINLIST */
+
+table.adminlist {
+	width: 100%;
+	border-spacing: 1px;
+	background-color: #e7e7e7;
+	color: #666;
+}
+
+table.adminlist td,
+table.adminlist th {
+  padding: 4px; 
+}
+
+table.adminlist thead th {
+	text-align: center;
+	background: #f0f0f0;
+	color: #666;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #fff;
+}
+
+table.adminlist thead a:hover {
+  text-decoration: none; 
+}
+
+table.adminlist thead th img {
+  vertical-align: middle; 
+}
+
+table.adminlist tbody th {
+  font-weight: bold; 
+}
+
+table.adminlist tbody tr {
+  background-color: #fff;
+  text-align: left;
+  height: 22px;
+  line-height: 22px;
+}
+table.adminlist tbody tr.row1 {
+  background: #f9f9f9; 
+  border-top: 1px solid #fff;
+  height: 22px;
+  line-height: 22px;
+}
+
+table.adminlist tbody tr.row0:hover td,
+table.adminlist tbody tr.row1:hover td  {
+  background-color: #ffd ; 
+}
+
+table.adminlist tbody tr td {
+  height: 25px;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+table.adminlist tbody tr.row1 td {
+  background: #f9f9f9;
+  border-top: 1px solid #FFF;
+}
+
+table.adminlist tfoot tr {
+  text-align: center;
+  color: #333; 
+}
+
+table.adminlist tfoot td,
+table.adminlist tfoot th {
+  background-color: #f3f3f3;
+  border-top: 1px solid #999;
+  text-align: center;
+}
+
+table.adminlist td.order { 
+  text-align: center;
+  white-space: nowrap;
+}
+
+table.adminlist td.order span {
+  float: left;
+  display: block;
+  width: 20px;
+  text-align: center;
+}
+
+table.adminlist .pagination { 
+  display: table;
+  padding: 0;
+  margin:0 auto;
+}
+
+/* LOGIN */
+div#login {
+  width: 450px;
+  height: 150px;
+  margin-left: -150px;  /***  width / 2   ***/
+  position: absolute;
+  top: -100px;          /***  height / 2   ***/
+  left: 50%;
+}
+
+div#login div#loginform {
+  width: 350px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  padding: 20px;
+}
+
+div#login input {
+  border: 1px solid #000000;
+}
+
+div#login table {
+  margin-top: 40px;
+}
+
+div#login table tr {
+  height: 32px;
+  line-height: 32px;
+}
+
+div#login table td {
+  width: 120px;
+}
+
+div#loginerror {
+  color: red;
+}
+
+/* FOOTER */
+div#mainContainer div.footer {
+  height: 6px;
+  background: url('../gfx/body-footer.png') no-repeat;
+}

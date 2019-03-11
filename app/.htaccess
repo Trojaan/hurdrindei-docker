@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^([0-9]*)/(.*).html/(.*)/(.*)/ index.php?pageID=$1&title=$2&year=$3&distance=$4
+RewriteRule ^([0-9]*)/(.*).html index.php?pageID=$1&title=$2
